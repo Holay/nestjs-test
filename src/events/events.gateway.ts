@@ -16,9 +16,9 @@ export class EventsGateway implements OnGatewayInit {
   server: Server;
 
   afterInit(server: any) {
-    setInterval(() => {
-      this.sendData('PENAM092')
-    }, 30000)
+    // setInterval(() => {
+    //   this.sendData('PENAM092')
+    // }, 30000)
   }
 
   @SubscribeMessage('events')
