@@ -8,7 +8,7 @@ export class WstestController {
     private eventsGateway: EventsGateway
   ){}
 
-  @Get(':user')
+  @Get('/:user')
   testSocket(
     @Param('user') user: string
   ){
@@ -17,7 +17,7 @@ export class WstestController {
       count++;      
     }
     console.log(`sending notification to ${user}`)
-    this.eventsGateway.sendData(user || '')
+    this.eventsGateway.sendData(user || 'PENAM092')
     return 'Endpoint call succesful'
   }
 }
